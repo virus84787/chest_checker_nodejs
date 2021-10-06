@@ -6,9 +6,9 @@ const settings = require('./routes/settings');
 const champions = require('./routes/champions');
 
 const ROUTES = {
-    summoner: '/summoner',
-    settings: '/settings',
-    champions: '/champions'
+    summoner: '/api-checker/summoner',
+    settings: '/api-checker/settings',
+    champions: '/api-checker/champions'
 }
 
 const PORT = 3000;
