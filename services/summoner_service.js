@@ -11,7 +11,8 @@ async function getServerSummonerIdsByName(summonerName) {
         for (i = 0; i < servers.length; i++) {
             let server = servers[i];
             try { 
-                let { data: summIdData } = await axios.get(`https://${server}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${apiKey}`)
+                const uri = `https://${server}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${apiKey}`;
+                let { data: summIdData } = await axios.get(encodeURI(uri));
                 serversSummonerIds.push({ server: server, id: summIdData?.id });
             } catch (error) {
 
