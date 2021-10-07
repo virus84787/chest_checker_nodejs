@@ -20,7 +20,7 @@ async function mapFreeChampionsNames(freeChampionsIds) {
     for (const championId of freeChampionsIds) {
         freeChampions.push(champNames[championId]);
     }
-
+    freeChampions.sort();
     return freeChampionsNamesList = { freeChampions };
 }
 
